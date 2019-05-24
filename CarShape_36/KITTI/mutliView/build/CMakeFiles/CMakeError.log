@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec689389511/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec689389511.dir/build.make CMakeFiles/cmTryCompileExec689389511.dir/build
+make[1]: Entering directory `/home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec689389511.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec689389511.dir/CheckSymbolExists.c.o   -c /home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec689389511
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec689389511.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec689389511.dir/CheckSymbolExists.c.o  -o cmTryCompileExec689389511 -rdynamic 
+CMakeFiles/cmTryCompileExec689389511.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec689389511] Error 1
+make[1]: Leaving directory `/home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec689389511/fast] Error 2
+
+File /home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2357635228/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2357635228.dir/build.make CMakeFiles/cmTryCompileExec2357635228.dir/build
+make[1]: Entering directory `/home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2357635228.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2357635228.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2357635228
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2357635228.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2357635228.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2357635228 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec2357635228] Error 1
+make[1]: Leaving directory `/home/sarthak/Documents/CarShape_36/KITTI/mutliView/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2357635228/fast] Error 2
+
+

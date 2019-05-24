@@ -1,0 +1,2 @@
+/home/sarthak/Documents/CarShape_36/KITTI/build/CMakeFiles/singleViewPoseAdjuster.dir
+/home/sarthak/Documents/CarShape_36/KITTI/build/CMakeFiles/singleViewShapeAdjuster.dir
